@@ -8,7 +8,7 @@ jobs:
   build:
     environment:
       name: npmjs
-      url: https://www.npmjs.com/package/@dotforge/core
+      url: https://www.npmjs.com/package/@dotforge/core/v/${{ github.ref_name }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
