@@ -1,4 +1,4 @@
-name: Publish package to GitHub Packages
+name: Publish package
 
 on:
   release:
@@ -15,10 +15,10 @@ jobs:
       - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6.0.0
         with:
           node-version: '24.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@tailstory'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@dotforge'
       - run: npm ci
       - run: npm run build
-      - run: npm publish --registry=https://npm.pkg.github.com/
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
