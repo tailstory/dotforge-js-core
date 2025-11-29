@@ -4,12 +4,11 @@ on:
   release:
     types: [published]
 
-permissions:
-  id-token: write
-  contents: read
-
 jobs:
   build:
+    environment:
+      name: npmjs
+      url: https://www.npmjs.com/package/@dotforge/core
     runs-on: ubuntu-latest
     permissions:
       contents: read
