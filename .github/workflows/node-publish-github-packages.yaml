@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '24.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@dotforge'
+          scope: '@tailstory'
       - run: npm ci
       - run: npm run build
       - run: npm publish
